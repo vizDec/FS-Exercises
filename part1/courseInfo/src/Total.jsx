@@ -1,8 +1,8 @@
-const Total = (props) => {
+const Total = ({ parts }) => {
     let sum = 0
 
-    for(let i = 0; i < props.parts.length; i++) {
-        sum += props.parts[i].exercises
+    for(let i = 0; i < parts.length; i++) {
+        sum += parts[i].exercises
     }
 
     return (

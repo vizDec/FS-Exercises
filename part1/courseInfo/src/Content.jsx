@@ -1,8 +1,8 @@
-const Content = (props) => {
+const Content = ({ parts }) => {
     return (
         <div>
             {
-                props.parts.map((part) => (
+                parts.map((part) => (
                     <p key={part.index}>{part.partTitle} {part.exercises}</p>
                 ))
             }
