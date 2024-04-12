@@ -1,6 +1,9 @@
 const Result = ({value, name}) => {
     return (
-        <p>{name}: {value}</p>
+        <tr>
+            <td>{name}</td>
+            <td>{value}</td>
+        </tr>
     )
 }
 

@@ -1,6 +1,6 @@
 import { useState } from "react"
-import { Button } from "./Button"
-import { Result } from "./Resutl"
+import { Form } from "./Form"
+import { Statistics } from "./Statistics"
 
 const App = () => {
   const [good, setGood] = useState(0)
@@ -15,15 +15,15 @@ const App = () => {
     <>
       <h1>Give feedback</h1>
 
-      <Button eventHandler={goodHandler} name={'Good'} />
-      <Button eventHandler={neutralHandler} name={'Neutral'} />
-      <Button eventHandler={badHandler} name={'Bad'} />
+      <Form 
+        goodHandler={goodHandler}
+        neutralHandler={neutralHandler} 
+        badHandler={badHandler}/>
 
-      <h2>Statistics</h2>
-
-      <Result value={good} name={'Good'}/>
-      <Result value={neutral} name={'Neutral'}/>
-      <Result value={bad} name={'Bad'}/>
+      <Statistics 
+        good={good} 
+        neutral={neutral} 
+        bad={bad}/>
     </>
   )
 }
