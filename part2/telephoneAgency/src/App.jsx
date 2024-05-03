@@ -27,7 +27,7 @@ const App = () => {
 
   const addVerification = (e) => {
     e.preventDefault()
-    const isRepeated = persons.some(person => person.name === newName)
+    const isRepeated = persons.some(person => person.name.toLowerCase() === newName.toLowerCase())
     if(isRepeated) {
       editNumber()
     } else {
